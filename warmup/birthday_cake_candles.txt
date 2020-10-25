@@ -1,0 +1,18 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/birthday-cake-candles/problem
+
+int birthdayCakeCandles(vector<int> candles) {
+    int max_height = candles[0];
+    int count = 0;
+    for(int i=0; i<candles.size(); i++){
+        max_height = max(max_height, candles[i]);
+    }
+
+    for(int i=0; i<candles.size(); i++){
+        if(candles[i] == max_height){
+            count++;
+        }
+    }
+    return count;   
+}
+
+Time complexity : O(n), where 'n' can be the size of the vector
