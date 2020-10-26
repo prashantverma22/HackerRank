@@ -1,0 +1,17 @@
+** Link to the challenge - https://www.hackerrank.com/challenges/staircase/problem
+
+void staircase(int n) {
+    int sp=n-1;  // spaces
+    int st=1;    // stars (*)
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=sp; j++){
+            cout << " ";
+        }
+        for(int j=1; j<=st; j++){
+            cout << "#";
+        }
+        sp--;
+        st++;
+        cout << endl;
+    }
+}
