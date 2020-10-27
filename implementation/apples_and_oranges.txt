@@ -1,0 +1,51 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/apple-and-orange/problem
+
+Approach 1:--
+
+void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vector<int> oranges) {
+int c1,c2;
+c1=c2=0;
+for(int i=0;i<apples.size();i++){
+    apples[i] += a;
+}
+for(int i=0;i<oranges.size();i++){
+    oranges[i] += b;
+}
+for(int i=0;i<apples.size();i++){
+    if(apples[i] >= s && apples[i] <= t){
+        c1++;
+    }
+}
+for(int i=0;i<oranges.size();i++){
+    if(oranges[i] >= s && oranges[i] <= t){
+        c2++;
+    }
+}
+cout<<c1<<endl<<c2;
+}
+
+Time complexity : O(n)
+
+---------------------------------------------------------------------
+
+Approach 2:--  Using an approach with a little bit less computation
+
+
+void countApplesAndOranges(int s, int t, int a, int b, vector<int> apples, vector<int> oranges) {
+    int temp1 = 0, temp2 = 0, ans1 = 0, ans2 = 0;
+    for(int i=0; i<apples.size(); i++){
+        temp1 = apples[i] + a;
+        if(temp1 >= s and temp1 <= t){
+            ans1++;
+        }
+    }
+    for(int j=0; j<oranges.size(); j++){
+        temp2 = oranges[j] + b;
+        if(temp2 >= s and temp2 <= t){
+            ans2++;
+        }
+    }
+    cout << ans1 << endl << ans2 << endl;
+}
+
+Time complexity: O(n)
