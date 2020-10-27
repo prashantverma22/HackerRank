@@ -1,0 +1,39 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/kangaroo/problem
+
+Approach 1:--
+
+string kangaroo(int x1, int v1, int x2, int v2) {
+    int r1=x1+v1;
+    int r2=x2+v2;
+    while(r1<r2)
+    {
+        r1+=v1;
+        r2+=v2;
+    }
+    if(r1==r2){
+        return "YES";
+    } 
+    else {
+        return "NO";
+    }  
+}
+
+
+Time complexity : O(n) in general terms, where 'n' is the number of iterations taking place in the while loop. 
+
+----------------------------------------------------------------------------------------------------------------------
+
+Approach 2:--  
+
+string kangaroo(int x1, int v1, int x2, int v2) {
+    if(v1 > v2){
+        int r = (x1 - x2) % (v2 - v1);
+        if(r == 0){
+            return  "YES";
+        }
+    }
+    return "NO";
+}
+
+Time complexity: O(1)
+
