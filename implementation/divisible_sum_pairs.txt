@@ -1,0 +1,18 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/divisible-sum-pairs/problem
+
+Brute force approach :-- 
+
+int divisibleSumPairs(int n, int k, vector<int> ar) {
+    int count = 0;
+    for(int i=0; i<ar.size(); i++){
+        for(int j=i+1; j<ar.size(); j++){
+            if((ar[i] + ar[j]) % k == 0){
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+Time and space complexity :- O(n^2)
+
