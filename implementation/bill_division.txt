@@ -1,0 +1,23 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/bon-appetit/problem
+
+void bonAppetit(vector<int> bill, int k, int b) {
+    int n = bill.size();
+    int total_bill=0;
+    for(int i=0; i<n; i++){
+        if(i == k){
+            i++;
+        }
+        total_bill += bill[i];
+    }
+    int b_actual = total_bill/2; //7
+    if(b_actual == b){
+        cout<<"Bon Appetit"<<endl;
+    }
+    else{
+        b_actual = b - b_actual;
+        cout<<b_actual<<endl;
+    }
+}
+
+time and space complexity :- O(n)
+
