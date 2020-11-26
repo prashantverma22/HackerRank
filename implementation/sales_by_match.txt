@@ -1,0 +1,23 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/sock-merchant/problem
+
+int sockMerchant(int n, vector<int> ar) {
+    unordered_map<int,int> freq;
+    
+    for(int i=0; i<n; i++)
+    {
+        freq[ar[i]]++;
+    }
+    
+    int pairs=0;
+
+    for(auto it : freq)
+    {
+        pairs += it.second/2;
+    }
+
+    return pairs; 
+}
+
+time complexity :- O(n)
+space complexity :- O(1)
+
