@@ -1,0 +1,12 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/drawing-book/problem
+
+int pageCount(int n, int p) {
+    int x = n/2; //total turns required to go at the last page
+    int y = p/2; //turns required to go at target page starting from the first page. 
+    int z = x - y; //turns required to go at target page starting from the last page.
+    int ans = min(y,z);
+    return ans;
+}
+
+time complexity and space complexity :- O(1) 
+
