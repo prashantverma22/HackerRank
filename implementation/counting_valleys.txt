@@ -1,0 +1,21 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/counting-valleys/problem
+
+int countingValleys(int steps, string path) {
+    int altitude = 0, valleyCount = 0;
+    for(int i=0; i<steps; i++){
+        if(path[i] == 'U'){
+            altitude++;
+            if(altitude == 0){
+                valleyCount++;
+            }
+        }
+        else{
+            altitude--;
+        }
+    }
+    return valleyCount;
+}
+
+time complexity :- O(n)
+space complexity :- O(1) 
+
