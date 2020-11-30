@@ -1,0 +1,21 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/electronics-shop/problem
+
+int getMoneySpent(vector<int> keyboards, vector<int> drives, int b) {
+    int n = keyboards.size();
+    int m = drives.size();
+    int temp1 = -1, temp2 = -1;
+    for(int i=0; i<n; i++)
+    {
+        for(int j=0; j<m; j++)
+        {
+            temp1 = keyboards[i] + drives[j];
+            if(temp1 > temp2 && temp1 <= b){
+                temp2 = temp1;
+            }
+        }
+    }
+    return temp2;
+}
+
+time complexity & space complexity :- O(nxm)
+
