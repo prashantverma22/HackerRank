@@ -1,0 +1,55 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/reduced-string/problem
+
+#include <bits/stdc++.h>
+#include <stack>
+using namespace std;
+
+void print(stack<char> st){
+    stack<char> temp;
+    while(!st.empty()){
+        temp.push(st.top());
+        st.pop();
+    }
+    while(!temp.empty()){
+        char t=temp.top();
+        cout<<t;
+        temp.pop();
+        st.push(t);
+    }
+}
+
+// Complete the superReducedString function below.
+void superReducedString(string s) {
+    stack<char> st;
+    for(int i=0; s[i] != '\0'; i++)
+    {
+        if(st.empty()){
+            st.push(s[i]);
+        }
+        else if(s[i] != st.top()){
+            st.push(s[i]);
+        }
+        else{
+            st.pop();
+        }
+    }
+    if(st.empty()){
+        cout<<"Empty String"<<endl;
+    }
+    else{
+        print(st);
+    }
+}
+
+int main()
+{
+    string s;
+    cin>>s;
+    superReducedString(s);
+
+    return 0;
+}
+
+time complexity :-- O(n)
+space complexity :-- O(1)
+
