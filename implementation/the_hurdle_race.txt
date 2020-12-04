@@ -1,0 +1,21 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/the-hurdle-race/problem
+
+int hurdleRace(int k, vector<int> height) {
+    int ans = 0, max_height = 0;
+
+    for(int i=0; i<height.size(); i++){
+        max_height = max(max_height, height[i]);
+    }
+
+    if(k < max_height){
+        ans = max_height - k;
+        return ans;
+    }
+    else{
+        return 0;
+    }
+}
+
+
+time complexity:-- O(N)
+
