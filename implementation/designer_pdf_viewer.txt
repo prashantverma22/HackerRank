@@ -1,0 +1,19 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/designer-pdf-viewer/problem
+
+int designerPdfViewer(vector<int> h, string word) {
+    int l = word.length();
+    int max_height = 0;
+    int index = 0;
+    int area = 0;
+    for(int i=0; i<l; i++)
+    {
+        index = word[i] - 97;
+        max_height = max(max_height, h[index]);
+    }
+    area = max_height * l;
+    return area;
+}
+
+
+time complexity:-- O(n), where n is the length of the string.
+
