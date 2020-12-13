@@ -1,0 +1,16 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/strange-advertising/problem
+
+int viralAdvertising(int n) {
+    int people = 5, liked = 0, total = 0;
+    while(n--)
+    {
+        liked = people/2;
+        total += liked;
+        people = liked*3;
+    }
+    return total;
+}
+
+
+time complexity:-- O(n)
+
