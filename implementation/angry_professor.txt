@@ -1,0 +1,22 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/angry-professor/problem
+
+string angryProfessor(int k, vector<int> a) {
+    int count = 0;
+    for(int i=0; i<a.size(); i++)
+    {
+        if(a[i] <= 0){
+            count++;
+        }
+    }
+
+    if(count < k){
+        return "YES";
+    }
+    else{
+        return "NO";
+    }
+}
+
+
+time complexity:-- O(n), where 'n' is the size of the string.
+
