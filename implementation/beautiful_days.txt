@@ -1,0 +1,24 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem
+
+int reverse(int n){
+    int reverse = 0;
+    while(n > 0){
+        reverse = reverse*10 + n%10;
+        n = n/10;
+    }
+    return reverse;
+}
+
+int beautifulDays(int i, int j, int k) {
+    int ans = 0;
+    for(int t=i; t<=j; t++){
+        if(abs(t - reverse(t))%k == 0){
+            ans = ans + 1;
+        }
+    }
+    return ans;
+}
+
+
+time complexity:-- O(n)
+
