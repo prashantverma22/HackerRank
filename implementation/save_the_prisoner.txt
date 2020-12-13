@@ -1,0 +1,16 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/save-the-prisoner/problem
+
+int saveThePrisoner(int n, int m, int s) {
+    int ans = (m % n) + s - 1;
+    if(ans > n){
+        ans = ans % n;
+    }
+    else if(ans == 0){
+        return n;
+    }
+    return ans;
+}
+
+
+time complexity:-- O(1)
+
