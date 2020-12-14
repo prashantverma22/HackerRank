@@ -1,0 +1,22 @@
+**Link to the challenge - https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem
+
+int jumpingOnClouds(vector<int> c) {
+    int jumps = 0;
+    int i = 0;
+    int j = c.size() - 1;
+    while(i < j)
+    {
+        if(c[i + 2] == 0){
+            i += 2;
+        }
+        else{
+            i++;
+        }
+
+        jumps++;
+    }
+    return jumps;
+}
+
+time complexity: O(n)
+
