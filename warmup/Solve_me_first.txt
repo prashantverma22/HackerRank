@@ -1,0 +1,15 @@
+Link to the challenge:-- https://www.hackerrank.com/challenges/solve-me-first/problem
+
+C++:---
+
+int solveMeFirst(int a, int b) {
+  return a+b;
+}
+
+Javascript:--
+
+function solveMeFirst(a, b) {
+  return a+b   
+}
+
+Time & space complexity:-- O(1)
