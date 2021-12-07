@@ -16,4 +16,5 @@ vector<int> compareTriplets(vector<int> a, vector<int> b) {
     return result;
 }
 
-time and space complexity : O(1)
+time complexity : O(1)
+space complexity : O(n), where n is the size of the result and the input arrays.
