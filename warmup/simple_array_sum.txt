@@ -1,0 +1,26 @@
+Link to the challenge:-- https://www.hackerrank.com/challenges/simple-array-sum/problem
+
+C++:---
+
+int simpleArraySum(vector<int> ar) {
+    int n = ar.size();
+    int sum = 0;
+    for(int i=0; i<n; i++){
+        sum += ar[i];
+    }
+    return sum;
+}
+
+Javascript:--
+
+function simpleArraySum(ar) {
+    let sum=0;
+    for(let i=0; i<ar.length; i++){
+        sum += ar[i];
+    }
+    return sum;
+}
+
+
+
+Time & space complexity:-- O(n), where n is the size of array.
